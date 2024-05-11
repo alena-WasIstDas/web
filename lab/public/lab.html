@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://icon-icons.com/icons2/2849/PNG/512/plant_leaf_flower_abstract_icon_181451.png">
+    <title>Лабораторная 3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Список дел</h2>
+    <form>
+        <input type="text" id="myInput" placeholder="Новый элемент списка">
+        <span onclick="newElement()" class="addButton">Создать</span>
+        <span onclick="deleteAll()" class="addButton2">Очистить всё</span>
+    </form>
+    <div>
+        <dl id="myList">
+            <dt><button onclick="toggleStrike(this.parentNode)" >✓</button>Почесать кошку<button onclick="deleteElement(this.parentNode)">X</button></dt>
+            <dt><button onclick="toggleStrike(this.parentNode)">✓</button>Устать от этих лаб<button onclick="deleteElement(this.parentNode)">X</button></dt>
+            <dt><button onclick="toggleStrike(this.parentNode)">✓</button>Сложить грибы в лукошко<button onclick="deleteElement(this.parentNode)">X</button></dt>
+        </dl>
+        <hr class="short-hr">
+        <a href="#" class="filter-link" data-filter="completed" onclick="setFilter('completed')">Сделано</a>
+        <a href="#" class="filter-link" data-filter="uncompleted" onclick="setFilter('uncompleted')">Не сделано</a>
+        <a href="#" class="filter-link" data-filter="all" onclick="setFilter('all')">Все</a>    
+    </div>
+    <script href="script.js"></script>
+</body>
+<footer>
+    <hr><p class="footerP">Copyright ©️</p>
+</footer>
